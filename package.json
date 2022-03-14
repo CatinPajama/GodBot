@@ -2,9 +2,10 @@
   "name": "godbot",
   "version": "1.0.0",
   "description": "a discord bot that does everything",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "test": "node app.js"
+    "test": "node index.js",
+    "start": "node index.js"
   },
   "author": "Gorob",
   "license": "ISC",
@@ -14,7 +15,9 @@
     "discord-api-types": "^0.27.3",
     "discord.js": "^13.6.0",
     "dotenv": "^16.0.0",
+    "express": "^4.17.3",
     "mongoose": "^6.2.4",
+    "node": "^17.7.1",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.15"
   },

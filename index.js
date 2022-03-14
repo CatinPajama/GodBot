@@ -1,4 +1,5 @@
 const { Client, Intents, Collection } = require("discord.js");
+const keepAlive = require("./server")
 const fs = require("node:fs");
 const mongoose = require("mongoose");
 require("dotenv").config();
@@ -59,4 +60,5 @@ client.on("messageDelete", (message) => {
     });
   }
 });
+keepAlive();
 client.login(process.env.token);

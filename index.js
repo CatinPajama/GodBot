@@ -37,8 +37,9 @@ client.once("ready", () => {
 
 client.on("messageCreate", async (msg) => {
   rank(msg, statModel);
+  if(msg.content.length > 0 && msg.content[0] != ">") return;
 
-  const command = commands.get(msg.content.split(" ")[0]);
+  const command = commands.get(msg.content.substring(1).split(" ")[0]);
 
   if (!command) return;
 

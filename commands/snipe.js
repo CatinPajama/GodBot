@@ -7,9 +7,9 @@ module.exports = (msg) => {
     .sort({ _id: -1 })
     .limit(1)
     .then((data) => {
-      console.log("hmm", data[0].attachments);
+		content = data[0].username + " : " + data[0].content;
       msg.channel.send({
-        content: `${data[0].username} said ${data[0]["content"]}`,
+        content: content,
         files: data[0].attachments,
       });
     });

@@ -2,6 +2,10 @@ const { MessageAttachment } = require("discord.js");
 const snipeModel = require("../models/Snipe");
 
 module.exports = (msg) => {
+	if(msg.author.username != "catinpajamas") {
+		msg.reply("Get gud!");
+		return;
+	}
   snipeModel
     .find({})
     .sort({ _id: -1 })
